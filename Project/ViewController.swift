@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var user = User()
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func logIn(_ sender: UIButton) {
-        if(usernameField.text == "test" && passwordField.text == "test")
+        if(usernameField.text == user.username && passwordField.text == user.password)
         {
             usernameField.text = "asdasd";
         }
