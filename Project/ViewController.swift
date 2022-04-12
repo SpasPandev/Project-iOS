@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     @IBAction func logIn(_ sender: UIButton) {
         if(usernameField.text == user.username && passwordField.text == user.password)
         {
-            usernameField.text = "asdasd";
+            self.performSegue(withIdentifier: "Home screen", sender: self)
+            navigationItem.backButtonTitle = "Log out"
         }
     }
     
