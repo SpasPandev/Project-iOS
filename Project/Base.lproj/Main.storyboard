@@ -87,11 +87,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfu-wN-VRZ" customClass="CustomView" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="100" y="504" width="186" height="54"/>
+                                <rect key="frame" x="114" y="254" width="186" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="RsF-2n-bI8" appends="YES" id="Vqf-cr-iVe"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iT-jb-k7D" customClass="CustomView" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="114" y="396" width="186" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FnQ-n7-N0w" appends="YES" id="JPB-bN-0Am"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -104,13 +112,20 @@
                     <navigationItem key="navigationItem" id="dEi-pU-Y1q"/>
                     <connections>
                         <outlet property="tappedCustomView" destination="pfu-wN-VRZ" id="rzX-pa-RSk"/>
+                        <outlet property="tappedCustomView2" destination="9iT-jb-k7D" id="F6y-TB-hmi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z94-bd-1Tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="RsF-2n-bI8">
                     <connections>
-                        <action selector="tapCustomView:" destination="XTH-GW-t5K" id="bCP-o0-0S1"/>
-                        <segue destination="2pi-m6-qk3" kind="show" identifier="Gallerie Screen" id="1Ja-S8-3oN"/>
+                        <action selector="tapCustomView:" destination="XTH-GW-t5K" id="7B1-Np-sV8"/>
+                        <segue destination="2pi-m6-qk3" kind="show" id="yYC-cr-9dj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FnQ-n7-N0w">
+                    <connections>
+                        <action selector="tapCustomView2:" destination="XTH-GW-t5K" id="XjN-WM-TFI"/>
+                        <segue destination="8D5-Mo-frO" kind="show" identifier="Favorite Picture" id="CyK-bv-EIq"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -202,6 +217,50 @@
             </objects>
             <point key="canvasLocation" x="883" y="606"/>
         </scene>
+        <!--Favorite Picture View Controller-->
+        <scene sceneID="wT5-5J-HBz">
+            <objects>
+                <viewController id="8D5-Mo-frO" customClass="FavoritePictureViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MfI-cC-FBb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdY-e1-IFu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winter" translatesAutoresizingMaskIntoConstraints="NO" id="n9m-6N-bRE">
+                                        <rect key="frame" x="0.0" y="0.0" width="1440" height="2560"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="n9m-6N-bRE" firstAttribute="top" secondItem="xdY-e1-IFu" secondAttribute="top" id="FVk-ld-sc1"/>
+                                    <constraint firstAttribute="trailing" secondItem="n9m-6N-bRE" secondAttribute="trailing" id="I3M-jA-of6"/>
+                                    <constraint firstAttribute="bottom" secondItem="n9m-6N-bRE" secondAttribute="bottom" id="OGC-TZ-zcc"/>
+                                    <constraint firstItem="n9m-6N-bRE" firstAttribute="leading" secondItem="xdY-e1-IFu" secondAttribute="leading" id="xRp-3O-sff"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="FcB-ZX-Jwp"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="d24-oF-ZCP"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s4T-wW-4AD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xdY-e1-IFu" firstAttribute="top" secondItem="MfI-cC-FBb" secondAttribute="top" id="JEC-An-EqV"/>
+                            <constraint firstItem="xdY-e1-IFu" firstAttribute="leading" secondItem="MfI-cC-FBb" secondAttribute="leading" id="a5G-RB-CfC"/>
+                            <constraint firstAttribute="bottom" secondItem="xdY-e1-IFu" secondAttribute="bottom" id="pEv-mn-ZPU"/>
+                            <constraint firstAttribute="trailing" secondItem="xdY-e1-IFu" secondAttribute="trailing" id="rUi-NP-NvA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lze-LG-5Sr"/>
+                    <connections>
+                        <outlet property="imageView" destination="n9m-6N-bRE" id="tYO-9C-45y"/>
+                        <outlet property="scrollView" destination="xdY-e1-IFu" id="aql-8G-RDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkD-Is-xQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3451" y="777"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fvc-2k-LDd">
             <objects>
@@ -226,6 +285,7 @@
         <segue reference="l7t-5h-UYI"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="winter" width="1440" height="2560"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
