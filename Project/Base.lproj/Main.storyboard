@@ -104,7 +104,6 @@
                     <navigationItem key="navigationItem" id="dEi-pU-Y1q"/>
                     <connections>
                         <outlet property="tappedCustomView" destination="pfu-wN-VRZ" id="rzX-pa-RSk"/>
-                        <segue destination="2pi-m6-qk3" kind="show" identifier="Gallerie Screen" id="CSf-Db-Zb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z94-bd-1Tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,7 +223,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CSf-Db-Zb9"/>
         <segue reference="l7t-5h-UYI"/>
     </inferredMetricsTieBreakers>
     <resources>
