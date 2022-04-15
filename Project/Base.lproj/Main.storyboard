@@ -96,6 +96,11 @@
                                     <action selector="openGallerie:" destination="xoB-PT-fhi" eventType="touchUpInside" id="owM-nX-2Kx"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfu-wN-VRZ" customClass="CustomView" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="100" y="504" width="186" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hbl-Py-6UQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -205,6 +210,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dZL-UG-MuQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BtP-6o-CEP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
